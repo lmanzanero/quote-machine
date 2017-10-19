@@ -24,7 +24,17 @@
   </div>
 
   <script type="text/javascript">
-    let url = "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=JSON_CALLBACK"
+    let url = "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=JSON_CALLBACK";
+    fetch(url, {
+        mode: 'no-cors',
+        method: 'GET'
+      })
+      .then(function (data) {
+        console.log('Request succeeded with JSON response', data);
+      })
+      .catch(function (error) {
+        console.log('Request failed', error);
+      });
 
   </script>
 </body>
